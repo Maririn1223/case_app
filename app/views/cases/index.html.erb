@@ -1,0 +1,23 @@
+  <%= render"header" %>
+<div class="contents-row">
+
+  <div class="user-form">
+  <% if user_signed_in? %>
+
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to "投稿する", new_case_path %>
+  <% else %>
+      <%= link_to "ログイン", new_user_session_path %>
+      <%= link_to "新規登録", new_user_registration_path %>
+  <% end %>
+  </div>
+    <h2 class="title">投稿事例一覧</h2>
+    <% @cases.each do |c| %>
+      <div class="content">
+        <p><%= c.title %></p>
+        <p><%= c.support %></p>
+        <p><%= c.result %><p>
+      </div>
+    <% end %>
+  </div>
+</div>

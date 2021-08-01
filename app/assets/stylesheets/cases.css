@@ -1,0 +1,13 @@
+.contents-row {
+  background-color: aquamarine;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.header {
+  background-color: burlywood;
+}
+.new-contants {
+  display: flex;
+  background-color: cadetblue;
+}

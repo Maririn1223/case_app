@@ -1,0 +1,16 @@
+<div class="contents-row">
+  <div class="container">
+    <h3 >投稿する</h3>
+    <div class="new-contants">
+      <%= form_with(model: @case, local: true) do |form| %>
+        <%= form.text_field :title, placeholder: "題名" %>
+        <%= form.text_field :charactristic, placeholder: "特性" %>
+        <%= form.text_area :everyday, placeholder: "毎日の様子" %>
+        <%= form.text_area :task, placeholder: "課題" %>
+        <%= form.text_area :support, placeholder: "課題に対する支援" %>
+        <%= form.text_area :result, placeholder: "支援の結果・傾向" %>
+        <%= form.submit "SEND" %>
+      <% end %>
+    </div>
+  </div>
+</div>
